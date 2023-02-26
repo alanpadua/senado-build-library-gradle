@@ -1,4 +1,4 @@
 package job.library
 
-library('senado-build-library-gradle')
+@Library('senado-build-library-gradle')
 buildPipeline()

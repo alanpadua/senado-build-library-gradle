@@ -6,6 +6,7 @@ import org.junit.jupiter.api.TestInstance
 import static com.lesfurets.jenkins.unit.global.lib.GitSource.gitSource
 import static com.lesfurets.jenkins.unit.global.lib.LibraryConfiguration.library
 
+
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class BuildPipelineTest extends BasePipelineTest {
 
@@ -35,7 +36,7 @@ class BuildPipelineTest extends BasePipelineTest {
                 .allowOverride(true)
                 .implicit(false)
                 .build()
-        
+
         helper.registerSharedLibrary(library)
     }
 

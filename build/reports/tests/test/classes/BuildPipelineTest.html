@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.300s</div>
+<div class="counter">0.124s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#tab1">Tests</a>
 </li>
-<li>
-<a href="#tab2">Standard output</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
@@ -76,99 +73,67 @@
 <a name="test()"></a>
 <h3 class="failures">test()</h3>
 <span class="code">
-<pre>com.lesfurets.jenkins.unit.global.lib.LibraryLoader$LibraryLoadingException: Error on loading library senado-build-library-gradle@main : No signature of method: groovy.lang.GroovyClassLoader.parseClass() is applicable for argument types: (GroovyCodeSource, Boolean) values: [groovy.lang.GroovyCodeSource@1c486925, true]
-Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClass(groovy.lang.GroovyCodeSource), parseClass(java.io.File), parseClass(java.lang.String), parseClass(java.io.Reader, java.lang.String), parseClass(java.lang.String, java.lang.String)
-	at app//com.lesfurets.jenkins.unit.global.lib.LibraryLoader.doLoadLibrary(LibraryLoader.groovy:140)
-	at app//com.lesfurets.jenkins.unit.global.lib.LibraryLoader.loadLibrary(LibraryLoader.groovy:86)
-	at com.lesfurets.jenkins.unit.global.lib.LibraryLoader$loadLibrary$0.call(Unknown Source)
+<pre>org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/home/alan/Documentos/DesenvolvimentoWSL/Senado/senado-build-library-gradle-ext/job/library/Jenkinsfile: 3: You cannot define a method[buildPipeline] without method body in the script. Try  adding a method body @ line 3, column 1.
+   @Library('senado-build-library-gradle')
+   ^
+
+1 error
+
+	at app//org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:292)
+	at app//org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:148)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.collectSyntaxError(AstBuilder.java:5063)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.createParsingFailedException(AstBuilder.java:5042)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.createParsingFailedException(AstBuilder.java:5019)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.validateMethodDeclaration(AstBuilder.java:2076)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.visitMethodDeclaration(AstBuilder.java:2043)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.visitMethodDeclaration(AstBuilder.java:378)
+	at app//org.apache.groovy.parser.antlr4.GroovyParser$MethodDeclarationContext.accept(GroovyParser.java:2301)
+	at app//groovyjarjarantlr4.v4.runtime.tree.AbstractParseTreeVisitor.visitChildren(AbstractParseTreeVisitor.java:48)
+	at app//org.apache.groovy.parser.antlr4.GroovyParserBaseVisitor.visitScriptStatement(GroovyParserBaseVisitor.java:482)
+	at app//org.apache.groovy.parser.antlr4.GroovyParser$ScriptStatementContext.accept(GroovyParser.java:477)
+	at app//groovyjarjarantlr4.v4.runtime.tree.AbstractParseTreeVisitor.visit(AbstractParseTreeVisitor.java:20)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.visit(AstBuilder.java:4703)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.lambda$visitScriptStatements$0(AstBuilder.java:523)
+	at java.base@17.0.6/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@17.0.6/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base@17.0.6/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@17.0.6/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@17.0.6/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base@17.0.6/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@17.0.6/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.visitScriptStatements(AstBuilder.java:524)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.visitCompilationUnit(AstBuilder.java:481)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.visitCompilationUnit(AstBuilder.java:378)
+	at app//org.apache.groovy.parser.antlr4.GroovyParser$CompilationUnitContext.accept(GroovyParser.java:323)
+	at app//groovyjarjarantlr4.v4.runtime.tree.AbstractParseTreeVisitor.visit(AbstractParseTreeVisitor.java:20)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.visit(AstBuilder.java:4703)
+	at app//org.apache.groovy.parser.antlr4.AstBuilder.buildAST(AstBuilder.java:471)
+	at app//org.apache.groovy.parser.antlr4.Antlr4ParserPlugin.buildAST(Antlr4ParserPlugin.java:58)
+	at app//org.codehaus.groovy.control.SourceUnit.buildAST(SourceUnit.java:255)
+	at java.base@17.0.6/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base@17.0.6/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base@17.0.6/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at app//org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:663)
+	at app//groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:373)
+	at app//groovy.lang.GroovyClassLoader.lambda$parseClass$2(GroovyClassLoader.java:316)
+	at app//org.codehaus.groovy.runtime.memoize.StampedCommonCache.compute(StampedCommonCache.java:163)
+	at app//org.codehaus.groovy.runtime.memoize.StampedCommonCache.getAndPut(StampedCommonCache.java:154)
+	at app//groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:314)
+	at app//groovy.util.GroovyScriptEngine$ScriptClassLoader.doParseClass(GroovyScriptEngine.java:231)
+	at app//groovy.util.GroovyScriptEngine$ScriptClassLoader.parseClass(GroovyScriptEngine.java:218)
+	at app//groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:298)
+	at app//groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:258)
+	at app//groovy.util.GroovyScriptEngine.loadScriptByName(GroovyScriptEngine.java:534)
+	at groovy.util.GroovyScriptEngine$loadScriptByName$0.call(Unknown Source)
 	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
 	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
 	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at app//com.lesfurets.jenkins.unit.BasePipelineTest$_registerAllowedMethods_closure23.doCall(BasePipelineTest.groovy:217)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at app//org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at app//org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:39)
-	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at app//com.lesfurets.jenkins.unit.PipelineTestHelper.callClosure(PipelineTestHelper.groovy:755)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at app//org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:342)
-	at app//org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:63)
+	at app//com.lesfurets.jenkins.unit.PipelineTestHelper.loadScript(PipelineTestHelper.groovy:523)
+	at com.lesfurets.jenkins.unit.PipelineTestHelper$loadScript$8.callCurrent(Unknown Source)
 	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
 	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
 	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at app//com.lesfurets.jenkins.unit.PipelineTestHelper$_closure3.doCall(PipelineTestHelper.groovy:305)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at app//org.codehaus.groovy.runtime.metaclass.ClosureMetaMethod.invoke(ClosureMetaMethod.java:88)
-	at app//groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1140)
-	at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at app//org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:318)
-	at job.library.Jenkinsfile.run(Jenkinsfile:3)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaMethod$doMethodInvoke.call(Unknown Source)
-	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
-	at app//com.lesfurets.jenkins.unit.PipelineTestHelper.callMethod(PipelineTestHelper.groovy:323)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
-	at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at app//com.lesfurets.jenkins.unit.PipelineTestHelper.invokeMethod(PipelineTestHelper.groovy)
-	at app//org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:70)
-	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at app//com.lesfurets.jenkins.unit.PipelineTestHelper$_closure3.doCall(PipelineTestHelper.groovy:310)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at app//org.codehaus.groovy.runtime.metaclass.ClosureMetaMethod.invoke(ClosureMetaMethod.java:88)
-	at app//groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1140)
-	at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at app//org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:39)
-	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
-	at app//com.lesfurets.jenkins.unit.PipelineTestHelper.runScriptInternal(PipelineTestHelper.groovy:609)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at app//org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at app//org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
 	at app//com.lesfurets.jenkins.unit.PipelineTestHelper.runScript(PipelineTestHelper.groovy:563)
 	at com.lesfurets.jenkins.unit.PipelineTestHelper$runScript$7.call(Unknown Source)
 	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
@@ -179,7 +144,7 @@ Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClas
 	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
 	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
 	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at app//BuildPipelineTest.test(BuildPipelineTest.groovy:53)
+	at app//BuildPipelineTest.test(BuildPipelineTest.groovy:55)
 	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -265,66 +230,6 @@ Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClas
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: groovy.lang.MissingMethodException: No signature of method: groovy.lang.GroovyClassLoader.parseClass() is applicable for argument types: (GroovyCodeSource, Boolean) values: [groovy.lang.GroovyCodeSource@1c486925, true]
-Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClass(groovy.lang.GroovyCodeSource), parseClass(java.io.File), parseClass(java.lang.String), parseClass(java.io.Reader, java.lang.String), parseClass(java.lang.String, java.lang.String)
-	at app//org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:72)
-	at app//org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:148)
-	at app//com.lesfurets.jenkins.unit.InterceptingGCL.parseClass(InterceptingGCL.groovy:58)
-	at app//groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:298)
-	at app//groovy.lang.GroovyClassLoader.recompile(GroovyClassLoader.java:947)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at app//org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at app//org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at app//com.lesfurets.jenkins.unit.InterceptingGCL.loadClass(InterceptingGCL.groovy:71)
-	at app//com.lesfurets.jenkins.unit.global.lib.LibraryLoader$_doLoadLibrary_closure4$_closure9.doCall(LibraryLoader.groovy:120)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at app//org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at app//groovy.lang.Closure.call(Closure.java:418)
-	at app//org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:50)
-	at app//org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:113)
-	at jdk.proxy2/jdk.proxy2.$Proxy21.accept(Unknown Source)
-	at java.base@17.0.6/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-	at java.base@17.0.6/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base@17.0.6/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base@17.0.6/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base@17.0.6/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base@17.0.6/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base@17.0.6/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-	at java.base@17.0.6/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base@17.0.6/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base@17.0.6/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base@17.0.6/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base@17.0.6/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base@17.0.6/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at app//com.lesfurets.jenkins.unit.global.lib.LibraryLoader$_doLoadLibrary_closure4.doCall(LibraryLoader.groovy:115)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at app//org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at app//groovy.lang.Closure.call(Closure.java:418)
-	at app//org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:50)
-	at app//org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:113)
-	at jdk.proxy2/jdk.proxy2.$Proxy21.accept(Unknown Source)
-	at java.base@17.0.6/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at app//com.lesfurets.jenkins.unit.global.lib.LibraryLoader.doLoadLibrary(LibraryLoader.groovy:103)
-	... 186 more
 </pre>
 </span>
 </div>
@@ -341,17 +246,10 @@ Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClas
 </thead>
 <tr>
 <td class="failures">test()</td>
-<td class="failures">0.300s</td>
+<td class="failures">0.124s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>Loading shared library senado-build-library-gradle with version main
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -361,7 +259,7 @@ Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClas
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 25 de fev. de 2023 23:49:04</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 26 de fev. de 2023 00:11:09</p>
 </div>
 </div>
 </body>
