@@ -40,6 +40,16 @@ class BuildPipelineTest extends BasePipelineTest {
 
     @Test
     void test() {
+//        String clonePath = '/tmp'
+//        def library = library()
+//                .name('senado-build-library-gradle')
+//                .retriever(gitSource('git@github.com:alanpadua/senado-build-library-gradle.git'))
+//                .targetPath(clonePath)
+//                .defaultVersion("main")
+//                .allowOverride(true)
+//                .implicit(false)
+//                .build()
+//        helper.registerSharedLibrary(library)
         runScript("job/library/Jenkinsfile")
         printCallStack()
     }
