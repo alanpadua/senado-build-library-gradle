@@ -29,12 +29,13 @@ class BuildPipelineTest extends BasePipelineTest {
 
         def library = library()
                 .name('senado-build-library-gradle')
-                .retriever(gitSource('https://github.com/alanpadua/senado-build-library-gradle.git'))
+                .retriever(gitSource('git@github.com:alanpadua/senado-build-library-gradle.git'))
                 .targetPath(clonePath)
                 .defaultVersion("main")
                 .allowOverride(true)
                 .implicit(false)
                 .build()
+        
         helper.registerSharedLibrary(library)
     }
 
