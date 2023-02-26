@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BuildPipelineTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-26T02:04:02" hostname="alan-Dell-G15-5511" time="0.172">
+<testsuite name="BuildPipelineTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-26T02:15:42" hostname="alan-Dell-G15-5511" time="0.176">
   <properties/>
-  <testcase name="test()" classname="BuildPipelineTest" time="0.172">
-    <failure message="org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:&#10;file:/home/alan/Documentos/DesenvolvimentoWSL/Senado/senado-build-library-gradle-ext/job/library/Jenkinsfile: 1: Error on loading library senado-build-library-gradle@master : No signature of method: groovy.lang.GroovyClassLoader.parseClass() is applicable for argument types: (GroovyCodeSource, Boolean) values: [groovy.lang.GroovyCodeSource@1e29f00e, true]&#10;Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClass(groovy.lang.GroovyCodeSource), parseClass(java.io.File), parseClass(java.lang.String), parseClass(java.io.Reader, java.lang.String), parseClass(java.lang.String, java.lang.String) @ line 1, column 1.&#10;   @Library('senado-build-library-gradle') _&#10;   ^&#10;&#10;1 error&#10;" type="org.codehaus.groovy.control.MultipleCompilationErrorsException">org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-file:/home/alan/Documentos/DesenvolvimentoWSL/Senado/senado-build-library-gradle-ext/job/library/Jenkinsfile: 1: Error on loading library senado-build-library-gradle@master : No signature of method: groovy.lang.GroovyClassLoader.parseClass() is applicable for argument types: (GroovyCodeSource, Boolean) values: [groovy.lang.GroovyCodeSource@1e29f00e, true]
+  <testcase name="test()" classname="BuildPipelineTest" time="0.176">
+    <failure message="org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:&#10;file:/home/alan/Documentos/DesenvolvimentoWSL/Senado/senado-build-library-gradle-ext/job/library/Jenkinsfile: 1: Error on loading library senado-build-library-gradle@main : No signature of method: groovy.lang.GroovyClassLoader.parseClass() is applicable for argument types: (GroovyCodeSource, Boolean) values: [groovy.lang.GroovyCodeSource@1c486925, true]&#10;Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClass(groovy.lang.GroovyCodeSource), parseClass(java.io.File), parseClass(java.lang.String), parseClass(java.io.Reader, java.lang.String), parseClass(java.lang.String, java.lang.String) @ line 1, column 1.&#10;   @Library('senado-build-library-gradle') _&#10;   ^&#10;&#10;1 error&#10;" type="org.codehaus.groovy.control.MultipleCompilationErrorsException">org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/home/alan/Documentos/DesenvolvimentoWSL/Senado/senado-build-library-gradle-ext/job/library/Jenkinsfile: 1: Error on loading library senado-build-library-gradle@main : No signature of method: groovy.lang.GroovyClassLoader.parseClass() is applicable for argument types: (GroovyCodeSource, Boolean) values: [groovy.lang.GroovyCodeSource@1c486925, true]
 Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClass(groovy.lang.GroovyCodeSource), parseClass(java.io.File), parseClass(java.lang.String), parseClass(java.io.Reader, java.lang.String), parseClass(java.lang.String, java.lang.String) @ line 1, column 1.
    @Library('senado-build-library-gradle') _
    ^
@@ -131,7 +131,7 @@ Possible solutions: parseClass(groovy.lang.GroovyCodeSource, boolean), parseClas
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[Loading shared library senado-build-library-gradle with version master
+  <system-out><![CDATA[Loading shared library senado-build-library-gradle with version main
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
