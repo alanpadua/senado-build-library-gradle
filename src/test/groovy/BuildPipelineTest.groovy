@@ -29,9 +29,9 @@ class BuildPipelineTest extends BasePipelineTest {
 
         def library = library()
                 .name('senado-build-library-gradle')
-                .retriever(gitSource('https://github.com/venosov/jenkins-pipeline-shared-library-example-victor.git'))
+                .retriever(gitSource('https://github.com/alanpadua/senado-build-library-gradle.git'))
                 .targetPath(clonePath)
-                .defaultVersion("master")
+                .defaultVersion("main")
                 .allowOverride(true)
                 .implicit(false)
                 .build()

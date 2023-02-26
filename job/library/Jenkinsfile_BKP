@@ -1,4 +1,0 @@
-package job.library
-
-@Library('senado-build-library-gradle') _
-buildPipeline()
