@@ -9,6 +9,10 @@ def call() {
         }
         agent none
         stages {
+            stage('Build lapada') {
+                sh 'echo lapada'
+            }
+
             stage('Build Test Analyze Package') {
                 agent any
                 steps {

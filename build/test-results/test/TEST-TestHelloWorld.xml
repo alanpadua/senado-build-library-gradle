@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestHelloWorld" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-26T19:46:46" hostname="alan-Dell-G15-5511" time="0.191">
+<testsuite name="TestHelloWorld" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-26T20:15:29" hostname="alan-Dell-G15-5511" time="0.105">
   <properties/>
-  <testcase name="testHello()" classname="TestHelloWorld" time="0.191"/>
+  <testcase name="testHello()" classname="TestHelloWorld" time="0.105"/>
   <system-out><![CDATA[Hello, Alan. 
    sayHello.call(Alan)
       sayHello.sh({script=ls, returnStdout=true})

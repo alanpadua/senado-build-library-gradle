@@ -1,5 +1,18 @@
-GLoading shared library senado-build-library-gradle with version master
-€git clone -b master --single-branch git@github.com:alanpadua/senado-build-library-gradle.git senado-build-library-gradle@master
+ELoading shared library senado-build-library-gradle with version main
+   Jenkinsfile.run()
+"      Jenkinsfile.buildPipeline()
+5         buildPipeline.pipeline(groovy.lang.Closure)
+7            buildPipeline.options(groovy.lang.Closure)
+;               buildPipeline.timeout({time=3, unit=HOURS})
+R               buildPipeline.logRotator({numToKeepStr=5, artifactNumToKeepStr=5})
+2               buildPipeline.buildDiscarder(null)
+*               buildPipeline.timestamps()
+5            buildPipeline.agent(groovy.lang.Closure)
+6            buildPipeline.stages(groovy.lang.Closure)
+T               buildPipeline.stage(Build Test Analyze Package, groovy.lang.Closure)
+;                  buildPipeline.agent(groovy.lang.Closure)
+;                  buildPipeline.steps(groovy.lang.Closure)
+@                     buildPipeline.readMavenPom({file=pom.xml})
 Hello, Alan. 
    sayHello.call(Alan)
 2      sayHello.sh({script=ls, returnStdout=true})
