@@ -1,4 +1,6 @@
 ELoading shared library senado-build-library-gradle with version main
+|git clone -b main --single-branch git@github.com:alanpadua/senado-build-library-gradle.git senado-build-library-gradle@main
+
    Jenkinsfile.run()
 "      Jenkinsfile.buildPipeline()
 5         buildPipeline.pipeline(groovy.lang.Closure)
@@ -9,6 +11,8 @@
 *               buildPipeline.timestamps()
 5            buildPipeline.agent(groovy.lang.Closure)
 6            buildPipeline.stages(groovy.lang.Closure)
+F               buildPipeline.stage(Build lapada, groovy.lang.Closure)
+0                  buildPipeline.sh(echo lapada)
 T               buildPipeline.stage(Build Test Analyze Package, groovy.lang.Closure)
 ;                  buildPipeline.agent(groovy.lang.Closure)
 ;                  buildPipeline.steps(groovy.lang.Closure)
