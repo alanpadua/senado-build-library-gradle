@@ -1,4 +1,5 @@
 package job.library
+import org.jenkins.plugins.workflow.libs.Library
 
 @Library('senado-build-library-gradle')
 buildPipeline()

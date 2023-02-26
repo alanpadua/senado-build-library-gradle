@@ -1,0 +1,2 @@
+@Library('senado-build-library-gradle@master') _
+buildPipeline()

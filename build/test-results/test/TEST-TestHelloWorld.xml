@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestHelloWorld" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-26T19:45:17" hostname="alan-Dell-G15-5511" time="0.185">
+  <properties/>
+  <testcase name="testHello()" classname="TestHelloWorld" time="0.185"/>
+  <system-out><![CDATA[Hello, Alan. 
+   sayHello.call(Alan)
+      sayHello.sh({script=ls, returnStdout=true})
+      sayHello.sh({script=ls -a, returnStdout=true})
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

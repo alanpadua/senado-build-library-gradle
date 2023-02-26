@@ -1,0 +1,6 @@
+GLoading shared library senado-build-library-gradle with version master
+€git clone -b master --single-branch git@github.com:alanpadua/senado-build-library-gradle.git senado-build-library-gradle@master
+Hello, Alan. 
+   sayHello.call(Alan)
+2      sayHello.sh({script=ls, returnStdout=true})
+5      sayHello.sh({script=ls -a, returnStdout=true})
