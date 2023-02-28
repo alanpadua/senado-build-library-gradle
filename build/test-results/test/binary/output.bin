@@ -1,5 +1,4 @@
 ELoading shared library senado-build-library-gradle with version main
-|git clone -b main --single-branch git@github.com:alanpadua/senado-build-library-gradle.git senado-build-library-gradle@main
 
    Jenkinsfile.run()
 "      Jenkinsfile.buildPipeline()
